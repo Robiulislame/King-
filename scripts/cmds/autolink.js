@@ -3,8 +3,6 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const qs = require("qs");
 const { getStreamFromURL, shortenURL, randomString } = global.utils;
-
-
 function loadAutoLinkStates() {
   try {
     const data = fs.readFileSync("autolink.json", "utf8");
@@ -15,11 +13,9 @@ function loadAutoLinkStates() {
   }
 }
 
-
 function saveAutoLinkStates(states) {
   fs.writeFileSync("autolink.json", JSON.stringify(states, null, 2));
 }
-
 
 let autoLinkStates = loadAutoLinkStates();
 
@@ -45,7 +41,7 @@ module.exports = {
       autoLinkStates[threadID] = 'on'; 
       saveAutoLinkStates(autoLinkStates);
     }
-
+    
     if (!this.threadStates[threadID]) {
       this.threadStates[threadID] = {};
     }
@@ -106,8 +102,7 @@ module.exports = {
       }
 
       const shortUrl = await shortenURL(res);
-      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡 \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
-
+      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n       🇷 🇴 🇧 🇮 🇺 🇱  \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
       api.sendMessage({
         body: messageBody,
         attachment: fs.createReadStream(path)
@@ -132,8 +127,7 @@ module.exports = {
         response.data.pipe(fs.createWriteStream(path));
         response.data.on('end', async () => {
           const shortUrl = await shortenURL(videoUrl);
-          const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
-
+          const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n        🇷 🇴 🇧 🇮 🇺 🇱   \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
           api.sendMessage({
             body: messageBody,
             attachment: fs.createReadStream(path)
@@ -158,10 +152,8 @@ module.exports = {
       if (fs.statSync(path).size / 1024 / 1024 > 25) {
         return api.sendMessage("The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
       }
-
       const shortUrl = await shortenURL(res);
-      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
-
+      const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n     🇷 🇴 🇧 🇮 🇺 🇱  \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
       api.sendMessage({
         body: messageBody,
         attachment: fs.createReadStream(path)
@@ -180,16 +172,13 @@ module.exports = {
         url: videoUrl,
         responseType: "stream"
       });
-
       if (response.headers['content-length'] > 87031808) {
         return api.sendMessage("The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
       }
-
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
-
+        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n          🇷 🇴 🇧 🇮 🇺 🇱   \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
         api.sendMessage({
           body: messageBody,
           attachment: fs.createReadStream(path)
@@ -203,22 +192,18 @@ module.exports = {
     try {
       const res = await axios.get(`https://pindl-pinterest.vercel.app/kshitiz?url=${encodeURIComponent(url)}`);
       const videoUrl = res.data.url;
-
       const response = await axios({
         method: "GET",
         url: videoUrl,
         responseType: "stream"
       });
-
       if (response.headers['content-length'] > 87031808) {
         return api.sendMessage("The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
       }
-
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
-
+        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n       🇷 🇴 🇧 🇮 🇺 🇱 \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
         api.sendMessage({
           body: messageBody,
           attachment: fs.createReadStream(path)
@@ -238,16 +223,13 @@ module.exports = {
         url: videoUrl,
         responseType: "stream"
       });
-
       if (response.headers['content-length'] > 87031808) {
         return api.sendMessage("The file is too large, cannot be sent", event.threadID, () => fs.unlinkSync(path), event.messageID);
       }
-
       response.data.pipe(fs.createWriteStream(path));
       response.data.on('end', async () => {
         const shortUrl = await shortenURL(videoUrl);
-        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n           𝗜𝘁𝘇 𝗔𝗿𝗬𝗔𝗡\n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
-
+        const messageBody = `╔════ஜ۩۞۩ஜ═══╗\n       🇷 🇴 🇧 🇮 🇺 🇱  \n ╚════ஜ۩۞۩ஜ═══╝\n\n🔗𝙳𝙾𝚆𝙽𝙻𝙾𝙰𝙳 𝚁𝚄𝙻: ${shortUrl}`;
         api.sendMessage({
           body: messageBody,
           attachment: fs.createReadStream(path)
@@ -257,7 +239,6 @@ module.exports = {
       console.error(err);
     }
   },
-
   getLink: function (url, api, event, path) {
     return new Promise((resolve, reject) => {
       if (url.includes("instagram")) {
