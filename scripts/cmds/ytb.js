@@ -42,7 +42,7 @@ module.exports = {
     config: {
         name: "ytb",
         version: "1.0",
-        author: "Team Clayx|Rômeo",
+        author: "ROBIUL 😍",
         countDown: 5,
         role: 0,
         shortDescription: {
