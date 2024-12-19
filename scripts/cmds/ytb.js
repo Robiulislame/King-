@@ -13,7 +13,7 @@ module.exports = {
   config: {
     name: "ytb",
     version: "1.3",
-    author: "ROBIUL😍",
+    author: "ROBIUL 😍",
     countDown: 5,
     role: 0,
     description: {
@@ -100,7 +100,7 @@ module.exports = {
     const videoUrl = selectedVideo.url;
 
     try {
-      const apiEndpoint = `http://95.217.151.27:20932/alldl?link=${encodeURIComponent(videoUrl)}`;
+      const apiEndpoint = `https://alldownloader-mj2x.onrender.com/alldl?link=${encodeURIComponent(videoUrl)}`;
       const response = await axios.get(apiEndpoint);
 
       if (!response.data.download_url) {
