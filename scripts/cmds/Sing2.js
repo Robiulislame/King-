@@ -10,7 +10,7 @@ module.exports = {
     name: "sing",
     version: "1.1",
     aliases: ["song"],
-    author: "ROBIUL😍",
+    author: "ROBIUL 😍",
     countDown: 5,
     role: 0,
     description: {
@@ -76,7 +76,7 @@ module.exports = {
     const videoUrl = selectedVideo.url;
 
     try {
-      const downloadUrlEndpoint = `http://95.217.151.27:20932/alldl?link=${encodeURIComponent(videoUrl)}`;
+      const downloadUrlEndpoint = `https://alldownloader-mj2x.onrender.com/alldl?link=${encodeURIComponent(videoUrl)}`;
       const respo = await axios.get(downloadUrlEndpoint);
       const downloadUrl = respo.data.download_url;
 
@@ -165,4 +165,4 @@ async function downloadFileParallel(url, filePath, totalSize, numChunks) {
   } catch (error) {
     console.error("Error downloading or writing the file:", error);
   }
-}
+    }
