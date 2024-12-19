@@ -9,7 +9,7 @@ module.exports = {
     name: "music",
     version: "1.2",
     aliases: ["music"],
-    author: "Team Calyx",
+    author: "ROBIUL 😍",
     countDown: 5,
     role: 0,
     description: {
