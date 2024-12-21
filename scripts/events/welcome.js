@@ -1,6 +1,7 @@
 const { getTime, drive } = global.utils;
 if (!global.temp.welcomeEvent)
 	global.temp.welcomeEvent = {};
+
 module.exports = {
 	config: {
 		name: "welcome",
@@ -8,6 +9,7 @@ module.exports = {
 		author: "NTKhang",
 		category: "events"
 	},
+
 	langs: {
 		vi: {
 			session1: "sáng",
@@ -24,12 +26,13 @@ module.exports = {
 			session2: "𝗻𝗼𝗼𝗻",
 			session3: "𝗮𝗳𝘁𝗲𝗿𝗻𝗼𝗼𝗻",
 			session4: "𝗲𝘃𝗲𝗻𝗶𝗻𝗴",
-			welcomeMessage: "━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n🅡🅞🅑🅘🅤🅛 𝗖𝗢𝗡𝗡𝗘𝗖𝗧𝗘𝗗 𝗦𝗨𝗖𝗖𝗘𝗦𝗙𝗨𝗟𝗟\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n𝗕𝗢𝗧 𝗔𝗗𝗠𝗜𝗡: 🅡🅞🅑🅘🅤🅛\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n𝗙𝗔𝗖𝗘𝗕𝗢𝗢𝗞:https://www.facebook.com/profile.php?id=100093774930731&mibextid=kFxxJD \n\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n𝗪𝗛𝗔𝗧𝗦 𝗔𝗣𝗣: wa.me/+8801887267477\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠: এই সব বাল চালাই না\n\n━━━━━━━━━━━━━━━━━━━━━━━━━━ ",
+			welcomeMessage: "😘 𝗔𝘀𝘀𝗮𝗹𝗮𝗺𝘂 𝗮𝗹𝗮𝗶𝗸𝘂𝗺 😘\n\n 𝗧𝗵𝗮𝗻𝗸 𝘆𝗼𝘂 𝗳𝗼𝗿 𝗶𝗻𝘃𝗶𝘁𝗶𝗻𝗴 𝗺𝗲 𝘁𝗼 𝘁𝗵𝗲 𝗴𝗿𝗼𝘂𝗽!\n 𝗕𝗼𝘁 𝗽𝗿𝗲𝗳𝗶𝘅: %1\n𝗧𝗼 𝘃𝗶𝗲𝘄 𝘁𝗵𝗲 𝗹𝗶𝘀𝘁 𝗼𝗳 𝗰𝗼𝗺𝗺𝗮𝗻𝗱𝘀, 𝗽𝗹𝗲𝗮𝗰𝗲 𝗲𝗻𝘁𝗲𝗿: %1𝗵𝗲𝗹𝗽\n\n♻ 𝗜 𝗵𝗼𝗽𝗲 𝘆𝗼𝘂 𝘄𝗶𝗹𝗹 𝗳𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗮𝗹𝗹 𝗴𝗿𝗼𝘂𝗽 𝗿𝘂𝗹𝗲𝘀 ♻",
 			multiple1: "𝘆𝗼𝘂",
 			multiple2: "𝘆𝗼𝘂 𝗴𝘂𝘆𝘀",
-			defaultWelcomeMessage: `╔════•|      ✿      |•════╗\n 💐আ্ঁস্ঁসা্ঁলা্ঁমু্ঁ💚আ্ঁলা্ঁই্ঁকু্ঁম্ঁ💐\n╚════•|      ✿      |•════╝\n\n    ✨🆆🅴🅻🅻 🅲🅾🅼🅴✨\n\n                 ❥𝐍𝐄𝐖~\n\n        ~🇲‌🇪‌🇲‌🇧‌🇪‌🇷‌~\n\n             [   {name} ]\n\n༄✺আ্ঁপ্ঁনা্ঁকে্ঁ আ্ঁমা্ঁদে্ঁর্ঁ✺࿐\n\n{threadName}\n\n 🥰🖤🌸—এ্ঁর্ঁ প্ঁক্ষ্ঁ🍀থে্ঁকে্ঁ🍀—🌸🥀\n\n         🥀_ভা্ঁলো্ঁবা্ঁসা্ঁ_অ্ঁভি্ঁরা্ঁম্ঁ_🥀\n\n༄✺আঁপঁনিঁ এঁইঁ গ্রুঁপেঁর {memberNumber} নঁং মে্ঁম্বা্ঁরঁ ࿐\n\n    ╔╦══•    •✠•❀•✠ •   •══╦╗\n        ♥  𝐁𝐎𝐓'𝐬 𝐎𝐖𝐍𝐄𝐑♥\n\n                           ☟                     \n\n♥🅡🅞🅑🅘🅤🅛♥\n    ╚╩══•    •✠•❀•✠ •    •══╩╝`
+			defaultWelcomeMessage: `🍒𝗔𝘀𝘀𝗮𝗹𝗮𝗺𝘂 𝗮𝗹𝗮𝗶𝗸𝘂𝗺🍒\n\n 𝗛𝗲𝗹𝗹𝗼 {userName}.\n𝗪𝗲𝗹𝗰𝗼𝗺𝗲 {multiple} 𝗧𝗼 𝘁𝗵𝗲 𝗰𝗮𝘁 𝗴𝗿𝗼𝘂𝗽: {boxName}\n 𝗛𝗮𝘃𝗲 𝗮 𝗻𝗶𝗰𝗲 {session} \n\n♻ 𝗜 𝗵𝗼𝗽𝗲 𝘆𝗼𝘂 𝘄𝗶𝗹𝗹 𝗳𝗼𝗹𝗹𝗼𝘄 𝗼𝘂𝗿 𝗮𝗹𝗹 𝗴𝗿𝗼𝘂𝗽 𝗿𝘂𝗹𝗲𝘀 ♻\n\n🐔🌬 𝗔𝗽𝗻𝗮𝗸𝗲 𝗮𝗺𝗮𝗱𝗲𝗿 𝗮𝗶 𝗴𝗿𝗼𝘂𝗽𝗲 𝗮𝘀𝗮𝗿 𝗷𝗼𝗻𝗻𝗼 𝗮𝗻𝗲𝗸 𝗼𝗻𝗲𝗸 𝘀𝘂𝗯𝗲𝗰𝗰𝗵𝗮 😘😊`
 		}
 	},
+
 	onStart: async ({ threadsData, message, event, api, getLang }) => {
 		if (event.logMessageType == "log:subscribe")
 			return async function () {
@@ -50,11 +53,12 @@ module.exports = {
 						joinTimeout: null,
 						dataAddedParticipants: []
 					};
-				
+
 				// push new member to array
 				global.temp.welcomeEvent[threadID].dataAddedParticipants.push(...dataAddedParticipants);
 				// if timeout is set, clear it
 				clearTimeout(global.temp.welcomeEvent[threadID].joinTimeout);
+
 				// set new timeout
 				global.temp.welcomeEvent[threadID].joinTimeout = setTimeout(async function () {
 					const threadData = await threadsData.get(threadID);
@@ -69,6 +73,7 @@ module.exports = {
 
 					if (dataAddedParticipants.length > 1)
 						multiple = true;
+
 					for (const user of dataAddedParticipants) {
 						if (dataBanned.some((item) => item.id == user.userFbId))
 							continue;
@@ -108,6 +113,7 @@ module.exports = {
 						);
 
 					form.body = welcomeMessage;
+
 					if (threadData.data.welcomeAttachment) {
 						const files = threadData.data.welcomeAttachment;
 						const attachments = files.reduce((acc, file) => {
